@@ -20,9 +20,13 @@ def lsdb():
     local("mysql --host=%(mysql_host)s --user=%(mysql_root_user)s --password=%(mysql_root_pass)s --port=%(mysql_port)s --socket=%(mysql_socket)s -e 'show databases;'" % env)
 
 
+def kill_ds_store(path):
+    local('rm -rf %s/.DS_Store --preserve-root' % path)
+
+
 def fetch_latest_db():
     path = "%(nib_path)s/%(project)s" % env
-    local('rm -rf %s/.DS_Store --preserve-root' % path)
+    kill_ds_store(path)
     dirList = sorted_ls(path)
     print "FILE", dirList[len(dirList)-1]
     return dirList[len(dirList)-1]
@@ -30,7 +34,9 @@ def fetch_latest_db():
 
 def ls(project=''):
     print "\n=== Nib Projects ==="
+    env.project = project
     path = "%(nib_path)s/%(project)s" % env
+    kill_ds_store(path)
     dirList = os.listdir(path)
     for fname in dirList:
         print "-- %s" % fname
@@ -38,11 +44,12 @@ def ls(project=''):
 
 
 def help():
-    print "Usage: fab dip:[projectname] [command]"
+    print "Usage: fab dip [command]"
     print "\nCommands:"
     print " ls\t\t\tlists all projects"
-    print " ls[:project]\t\tlists all databases for a project"
-    print " dump:project,db_name=[local database name]\n\t\t\tdumps a local database and places it in the Nib project directory"
+    print " lsdb\t\t\tlists all databases for a project"
+    print " dump:[project_dir],[db_name=database name]\n\t\t\tdumps a local database and places it in the Nib project directory"
+    print " load:[project_dir],[db_name=database name]\n\t\t\ttakes a Nib project database and loads it into the local database"
 
 
 def load(project=False, db_name=False):
@@ -62,7 +69,7 @@ def load(project=False, db_name=False):
         print "== importing the latest database for %(project)s into %(db_name)s ===" % env
         local("mysql --host=%(mysql_host)s --user=%(mysql_root_user)s --password=%(mysql_root_pass)s --socket=%(mysql_socket)s --port=%(mysql_port)s %(db_name)s < %(nib_path)s/%(project)s/%(db_file)s" % env)
 
-        print "\nImported %(nib_path)s/%(project)s/%(db_file)s into %(db_name)s/" % env
+        print "\nLoaded %(nib_path)s/%(project)s/%(db_file)s into %(db_name)s/" % env
     else:
         abort("project '%s' does not exist!" % project)
 
@@ -82,7 +89,7 @@ def dump(project=False, db_name=False):
 
     local("mysqldump --host=%(mysql_host)s --user=%(mysql_root_user)s --password=%(mysql_root_pass)s --socket=%(mysql_socket)s --port=%(mysql_port)s --lock-all-tables %(db_name)s > %(nib_path)s/%(project)s/%(sql_filename)s" % env)
 
-    print "\nCreated %(sql_filename)s in %(nib_path)s/%(project)s/" % env
+    print "\nDumped %(sql_filename)s into %(nib_path)s/%(project)s/ from %(db_name)s" % env
 
 
 def exists(p=''):
