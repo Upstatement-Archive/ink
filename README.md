@@ -18,9 +18,9 @@ This is set of tools written using [fabric](http://docs.fabfile.org/en/1.6/), a 
 * Make a copy of the sample fabricrc in your home directory with `cp sample.fabricrc ~/.fabricrc`
 * Update the `.fabricrc` with your information (sublime it with `subl ~/.fabricrc`)
 * Open your bash_profile
-  ```subl ~/.bash_profile```
+  `subl ~/.bash_profile`
 * Add this line:
-  ```export PATH=${PATH}:/Applications/MAMP/Library/bin``` to the bottom of your .bash_profile```
+  `export PATH=${PATH}:/Applications/MAMP/Library/bin` to the bottom of your .bash_profile
 
 ## Usage
 
@@ -48,7 +48,7 @@ Let's say you're Jared, and you're working with Mike.
 
 Mike has just posted his local database for project `princeton` with a `fab dip dump` commmand, and you'd like to load that into a local database called `wp_prince`.
 
-To load that, you'd run `fab dip load:princeton,db_name=wp_prince`
+To load that, you'd run `fab dip load:princeton,wp_prince`
 
 **note: This will only use the most recent file. At the moment you can't pull old SQL in using Nib**
 
