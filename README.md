@@ -17,6 +17,10 @@ This is set of tools written using [fabric](http://docs.fabfile.org/en/1.6/), a 
 * Go to the Nib directory: `cd ~/Sandbox/nib`
 * Make a copy of the sample fabricrc in your home directory with `cp sample.fabricrc ~/.fabricrc`
 * Update the `.fabricrc` with your information (sublime it with `subl ~/.fabricrc`)
+* Open your bash_profile
+  `subl ~/.bash_profile`
+* Add this line:
+  `export PATH=${PATH}:/Applications/MAMP/Library/bin` to the bottom of your .bash_profile
 
 ## Usage
 
@@ -36,7 +40,7 @@ run `fab dip lsdb`
 
 ### Dumping a local database to a project
 
-If you had a project directory called `inkwell` which was using local database `wp_inkwell` you would run `fab dip dump:inkwell,db_name=wp_inkwell`
+If you had a project directory called `inkwell` which was using local database `wp_inkwell` you would run `fab dip dump:inkwell,wp_inkwell`
 
 ### Updating a local database with the latest project database
 
