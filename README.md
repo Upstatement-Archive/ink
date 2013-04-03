@@ -26,29 +26,35 @@ This is set of tools written using [fabric](http://docs.fabfile.org/en/1.6/), a 
 
 For the time being, **you have to run all of these commands from the `nib` directory**.
 
+Also, arguments can be passed as ordered variables, or as keyed arguments. For example:
+
+**ordered**: `fab dump:inkwell,wp_inkwell`
+
+**keyed**: `fab load:project=inkwell,db=wp_inkwell`
+
 ### Creating projects
 
 Go to the `/Nib` folder in our shared `/Upstatement` folder on dropbox, and create a new project folder as you would normally.
 
 ### Listing projects
 
-run `fab dip ls` from the command line.
+run `fab ls` from the command line.
 
 ### Listing local databases
 
-run `fab dip lsdb`
+run `fab lsdb`
 
 ### Dumping a local database to a project
 
-If you had a project directory called `inkwell` which was using local database `wp_inkwell` you would run `fab dip dump:inkwell,wp_inkwell`
+If you had a project directory called `inkwell` which was using local database `wp_inkwell` you would run `fab dump:inkwell,wp_inkwell`
 
 ### Updating a local database with the latest project database
 
 Let's say you're Jared, and you're working with Mike. 
 
-Mike has just posted his local database for project `princeton` with a `fab dip dump` commmand, and you'd like to load that into a local database called `wp_prince`.
+Mike has just posted his local database for project `princeton` with a `fab dump` commmand, and you'd like to load that into a local database called `wp_prince`.
 
-To load that, you'd run `fab dip load:princeton,db=wp_prince`
+To load that, you'd run `fab load:princeton,wp_prince`
 
 **note: This will only use the most recent file. At the moment you can't pull old SQL in using Nib**
 

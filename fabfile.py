@@ -44,8 +44,9 @@ def help():
     print "\nCommands:"
     print " ls\t\t\tlists all projects"
     print " lsdb\t\t\tlists all databases for a project"
-    print " dump:[project_dir],[db=database name]\n\t\t\tdumps a local database and places it in the Nib project directory"
-    print " load:[project_dir],[db=database name]\n\t\t\ttakes a Nib project database and loads it into the local database"
+    print " dump:[project_dir],[database name]\n\t\t\tdumps a local database and places it in the Nib project directory"
+    print " load:[project_dir],[database name]\n\t\t\ttakes a Nib project database and loads it into the local database"
+    print "\ndump and load also accept project + dir arguments as keyed variables, like so: \nfab dump:project=someproj,db=somedb"
 
 
 def load(project=False, db=False):
