@@ -48,7 +48,7 @@ Let's say you're Jared, and you're working with Mike.
 
 Mike has just posted his local database for project `princeton` with a `fab dip dump` commmand, and you'd like to load that into a local database called `wp_prince`.
 
-To load that, you'd run `fab dip load:princeton,db_name=wp_prince`
+To load that, you'd run `fab dip load:princeton,db=wp_prince`
 
 **note: This will only use the most recent file. At the moment you can't pull old SQL in using Nib**
 
