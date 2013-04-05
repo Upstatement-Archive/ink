@@ -24,8 +24,7 @@ This is set of tools written using [fabric](http://docs.fabfile.org/en/1.6/), a 
 
 ---
 
-**MySQL**   
-You might need to download mySQL for osx. 
+**MySQL**: You might need to download mySQL for osx. 
 
 * Get the latest 64-bit MySQL **DMG** from here: [http://dev.mysql.com/downloads/mysql/](http://dev.mysql.com/downloads/mysql/)
 * Install the two packages AND the prefpane
