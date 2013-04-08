@@ -1,0 +1,17 @@
+# nib config
+name = Pete Karl
+dt_format = %Y-%m-%d_%H-%M-%S
+
+# MySQL connection credentials
+mysql_root_user = root
+mysql_root_pass = root
+mysql_host = localhost
+mysql_port = 8888
+
+# MAMP socket location
+mysql_socket = /Applications/MAMP/tmp/mysql/mysql.sock
+
+# Path to dropbox nib directory
+## cannot use ~ shortcut
+nib_path = /Users/pkarl/Dropbox/Upstatement/Nib
+nib_db_dir = db_archive
