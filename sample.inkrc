@@ -13,5 +13,5 @@ mysql_socket = /Applications/MAMP/tmp/mysql/mysql.sock
 
 # Path to dropbox ink directory
 ## cannot use ~ shortcut
-nib_path = /Users/pkarl/Dropbox/Upstatement/Nib
-nib_db_dir = db_archive
+ink_path = /Users/pkarl/Dropbox/Upstatement/Nib
+ink_db_dir = db_archive

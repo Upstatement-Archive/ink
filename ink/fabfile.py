@@ -24,7 +24,7 @@ def kill_ds_store(path):
 
 
 def fetch_latest_db():
-    path = "%(nib_path)s/%(project)s" % env
+    path = "%(ink_path)s/%(project)s" % env
     kill_ds_store(path)
     dirList = sorted_ls(path)
     print "FILE", dirList[len(dirList)-1]
@@ -32,9 +32,9 @@ def fetch_latest_db():
 
 
 def ls(project=''):
-    print "\n=== Nib Projects ==="
+    print "\n=== Ink Projects ==="
     env.project = project
-    path = "%(nib_path)s/%(project)s" % env
+    path = "%(ink_path)s/%(project)s" % env
     kill_ds_store(path)
     dirList = os.listdir(path)
     for fname in dirList:
@@ -57,9 +57,9 @@ def update(project=False, db=False):
 
     if(exists(env.project)):
         print "== importing the latest database for %(project)s into %(db)s ===" % env
-        local("mysql --host=%(mysql_host)s --user=%(mysql_root_user)s --password=%(mysql_root_pass)s --socket=%(mysql_socket)s --port=%(mysql_port)s %(db)s < %(nib_path)s/%(project)s/%(db_file)s" % env)
+        local("mysql --host=%(mysql_host)s --user=%(mysql_root_user)s --password=%(mysql_root_pass)s --socket=%(mysql_socket)s --port=%(mysql_port)s %(db)s < %(ink_path)s/%(project)s/%(db_file)s" % env)
 
-        print "\nLoaded %(nib_path)s/%(project)s/%(db_file)s into %(db)s/" % env
+        print "\nLoaded %(ink_path)s/%(project)s/%(db_file)s into %(db)s/" % env
     else:
         abort("project '%s' does not exist!" % project)
 
@@ -77,13 +77,13 @@ def save(project=False, db=False):
 
     env.sql_filename = "%s_%s.sql" % (env.db, datetime.datetime.now().strftime(env.dt_format))
 
-    local("mysqldump --host=%(mysql_host)s --user=%(mysql_root_user)s --password=%(mysql_root_pass)s --socket=%(mysql_socket)s --port=%(mysql_port)s --lock-all-tables %(db)s > %(nib_path)s/%(project)s/%(sql_filename)s" % env)
+    local("mysqldump --host=%(mysql_host)s --user=%(mysql_root_user)s --password=%(mysql_root_pass)s --socket=%(mysql_socket)s --port=%(mysql_port)s --lock-all-tables %(db)s > %(ink_path)s/%(project)s/%(sql_filename)s" % env)
 
-    print "\nDumped %(sql_filename)s into %(nib_path)s/%(project)s/ from %(db)s" % env
+    print "\nDumped %(sql_filename)s into %(ink_path)s/%(project)s/ from %(db)s" % env
 
 
 def exists(p=''):
-    projectList = os.listdir("%s/" % (env.nib_path))
+    projectList = os.listdir("%s/" % (env.ink_path))
     return any((True for x in [p] if x in projectList))
 
 

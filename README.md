@@ -1,4 +1,4 @@
-# nib: a set of tools for working within wordpress teams
+# ink: a set of tools for working within wordpress teams
 
 ## wat
 
@@ -14,7 +14,7 @@ This is set of tools written using [fabric](http://docs.fabfile.org/en/1.6/), a 
 ## installation
 
 * clone this repository (into `~/Sandbox`, for example)
-* Go to the Nib directory: `cd ~/Sandbox/nib`
+* Go to the Ink directory: `cd ~/Sandbox/ink`
 * Make a copy of the sample fabricrc in your home directory with `cp sample.fabricrc ~/.fabricrc`
 * Update the `.fabricrc` with your information (sublime it with `subl ~/.fabricrc`)
 * Open your bash_profile
@@ -30,12 +30,12 @@ This is set of tools written using [fabric](http://docs.fabfile.org/en/1.6/), a 
 * Install the two packages AND the prefpane
 * Follow the MySQL instructions here: [http://akrabat.com/computing/setting-up-php-mysql-on-os-x-10-8-mountain-lion/](http://akrabat.com/computing/setting-up-php-mysql-on-os-x-10-8-mountain-lion/)
 * After step 2 where you edit `~/.bash_profile`, dont forget to close your terminal window and open a new one. It won't work otherwise. Also, use `subl` if vim is confusing.
-* Now you can start a MySQL server from your system preferences panel, and if you type `mysql` into terminal it will tell you which versin you're running. Nib needs this to live. I think. 
+* Now you can start a MySQL server from your system preferences panel, and if you type `mysql` into terminal it will tell you which versin you're running. Ink needs this to live. I think. 
 
 
 ## Usage
 
-For the time being, **you have to run all of these commands from the `nib` directory**.
+For the time being, **you have to run all of these commands from the `ink` directory**.
 
 Also, arguments can be passed as ordered variables, or as keyed arguments. For example:
 
@@ -45,7 +45,7 @@ Also, arguments can be passed as ordered variables, or as keyed arguments. For e
 
 ### Creating projects
 
-Go to the `/Nib` folder in our shared `/Upstatement` folder on dropbox, and create a new project folder as you would normally.
+Go to the `/Ink` folder in our shared `/Upstatement` folder on dropbox, and create a new project folder as you would normally.
 
 ### Listing projects
 
@@ -67,7 +67,7 @@ Mike has just posted his local database for project `princeton` with a `fab dump
 
 To load that, you'd run `fab load:princeton,wp_prince`
 
-**note: This will only use the most recent file. At the moment you can't pull old SQL in using Nib**
+**note: This will only use the most recent file. At the moment you can't pull old SQL in using Ink**
 
 ## Changelog
 
