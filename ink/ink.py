@@ -46,4 +46,4 @@ if __name__ == "__main__":
     else:
         context['command'] = command
         # print context
-        os.system('fab %(command)s -c ~/.fabricrc -f %(path_to_fab)s' % context)
+        os.system('fab %(command)s -c ~/.inkrc -f %(path_to_fab)s' % context)

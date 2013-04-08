@@ -2,7 +2,7 @@
 
 ## wat
 
-This is set of tools written using [fabric](http://docs.fabfile.org/en/1.6/), a python-based tool for deployment + systems administration. The hope is that the annoying parts of setting up a new wordpress project will be marginalized by awesome productivity. If you'd like to contribute, fork it & change it & submit a pull request!
+This is set of tools written on top of [fabric](http://docs.fabfile.org/en/1.6/), a python-based tool for deployment + systems administration. The hope is that the annoying parts of setting up a new wordpress project will be marginalized by awesome productivity. If you'd like to contribute, fork it & change it & submit a pull request!
 
 ## Requirements
 
@@ -13,14 +13,11 @@ This is set of tools written using [fabric](http://docs.fabfile.org/en/1.6/), a 
 
 ## installation
 
-* clone this repository (into `~/Sandbox`, for example)
-* Go to the Ink directory: `cd ~/Sandbox/ink`
-* Make a copy of the sample fabricrc in your home directory with `cp sample.fabricrc ~/.fabricrc`
-* Update the `.fabricrc` with your information (sublime it with `subl ~/.fabricrc`)
-* Open your bash_profile
-  `subl ~/.bash_profile`
-* Add this line:
-  `export PATH=${PATH}:/Applications/MAMP/Library/bin` to the bottom of your .bash_profile
+* Make a copy of the sample inkrc in your home directory with `cp sample.inkrc ~/.inkrc`
+* Update the `.inkrc` with your information (sublime it with `subl ~/.inkrc`)
+* Open your bash_profile `subl ~/.bash_profile`
+* Add this line: `export PATH=${PATH}:/Applications/MAMP/Library/bin` to the bottom of your .bash_profile
+* from the `ink` directory, run `sudo python setup.py install`
 
 ---
 
