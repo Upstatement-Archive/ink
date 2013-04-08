@@ -1,4 +1,6 @@
+#! /usr/bin/env python
 import os
+import sys
 import datetime
 from fabric import state
 from fabric.api import local, env, abort
@@ -10,6 +12,10 @@ state.output.warnings = False
 state.output.running = False
 state.output.user = False
 state.output.status = False
+
+
+if __name__ == "__main__":
+    print "RAN", sys.argv
 
 
 def lsdb():

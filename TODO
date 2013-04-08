@@ -1,2 +1,0 @@
-- Get the fabfile in a globally accessible place
--- perhaps create a module out of it and use fabric's APIs in parallel?
