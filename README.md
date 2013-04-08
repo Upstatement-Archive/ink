@@ -22,6 +22,17 @@ This is set of tools written using [fabric](http://docs.fabfile.org/en/1.6/), a 
 * Add this line:
   `export PATH=${PATH}:/Applications/MAMP/Library/bin` to the bottom of your .bash_profile
 
+---
+
+**MySQL**: You might need to download mySQL for osx. 
+
+* Get the latest 64-bit MySQL **DMG** from here: [http://dev.mysql.com/downloads/mysql/](http://dev.mysql.com/downloads/mysql/)
+* Install the two packages AND the prefpane
+* Follow the MySQL instructions here: [http://akrabat.com/computing/setting-up-php-mysql-on-os-x-10-8-mountain-lion/](http://akrabat.com/computing/setting-up-php-mysql-on-os-x-10-8-mountain-lion/)
+* After step 2 where you edit `~/.bash_profile`, dont forget to close your terminal window and open a new one. It won't work otherwise. Also, use `subl` if vim is confusing.
+* Now you can start a MySQL server from your system preferences panel, and if you type `mysql` into terminal it will tell you which versin you're running. Nib needs this to live. I think. 
+
+
 ## Usage
 
 For the time being, **you have to run all of these commands from the `nib` directory**.
