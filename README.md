@@ -54,6 +54,6 @@ Let's say you're Jared, and you're working with Mike.
 
 Mike has just posted his local database for project `princeton` with a `ink.py save` commmand, and you'd like to load that into a local database called `wp_prince`.
 
-To load that, you'd run `ink.py update wp_prince from princeton`
+As Jared, you'd run `ink.py update wp_prince from princeton` to pull in his changes.
 
 **note: This will only use the most recent file. At the moment you can't pull old SQL in using Ink**
