@@ -13,8 +13,7 @@ This is set of tools written on top of [fabric](http://docs.fabfile.org/en/1.6/)
 
 ## installation
 
-* Download the <a href="https://github.com/Upstatement/ink/archive/master.zip">zip</a> from GitHub.
-* Unzip and navigate there in Terminal `cd ~/Downloads/ink-master/`
+* Clone this repo and cd into the `ink` dir
 * Make a copy of the sample inkrc in your home directory with `cp sample.inkrc ~/.inkrc`
 * Update the `.inkrc` with your information (sublime it with `subl ~/.inkrc`)
 * Open your bash_profile `subl ~/.bash_profile`
