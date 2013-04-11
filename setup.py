@@ -33,7 +33,7 @@ install_requires = [
 
 setup(
     name='ink',
-    version='0.2a',
+    version='0.2.1a',
     author='Pete Karl II',
     author_email='pete@upstatement.com',
     packages=['ink'],
