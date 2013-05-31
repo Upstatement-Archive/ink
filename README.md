@@ -7,7 +7,7 @@ This is set of tools written on top of [fabric](http://docs.fabfile.org/en/1.6/)
 ## Requirements
 
 * Dropbox
-* A MySQL database that contains your wp install
+* A MySQL database that contains your wp install (If this is a mystery, download [Sequel Pro](http://www.sequelpro.com/), and talk to Jared or Pete)
 * OSX Mountain Lion w/up-to-date [OSX Xcode Command Line Tools](http://slashusr.wordpress.com/2012/07/27/os-x-mountain-lion-need-to-reinstall-xcode-command-line-tools/)
 * [fabric](http://docs.fabfile.org/en/1.6/). (install with `sudo easy_install fabric==1.6`)
 
@@ -16,20 +16,7 @@ This is set of tools written on top of [fabric](http://docs.fabfile.org/en/1.6/)
 * Clone this repo and cd into the `ink` dir
 * Make a copy of the sample inkrc in your home directory with `cp sample.inkrc ~/.inkrc`
 * Update the `.inkrc` with your information (sublime it with `subl ~/.inkrc`)
-* Open your bash_profile `subl ~/.bash_profile`
-* Add this line: `export PATH=${PATH}:/Applications/MAMP/Library/bin` to the bottom of your .bash_profile
-* from the `ink-master` directory, run `sudo python setup.py install`
-
----
-
-**MySQL**: You might need to download mySQL for osx. 
-
-* Get the latest 64-bit MySQL **DMG** from here: [http://dev.mysql.com/downloads/mysql/](http://dev.mysql.com/downloads/mysql/)
-* Install the two packages AND the prefpane
-* Follow the MySQL instructions here: [http://akrabat.com/computing/setting-up-php-mysql-on-os-x-10-8-mountain-lion/](http://akrabat.com/computing/setting-up-php-mysql-on-os-x-10-8-mountain-lion/)
-* After step 2 where you edit `~/.bash_profile`, dont forget to close your terminal window and open a new one. It won't work otherwise. Also, use `subl` if vim is confusing.
-* Now you can start a MySQL server from your system preferences panel, and if you type `mysql` into terminal it will tell you which versin you're running. Ink needs this to live. I think. 
-
+* from the `ink` directory, run `sudo python setup.py install`
 
 ## Usage
 
