@@ -1,4 +1,4 @@
-# ink: a set of tools for working within wordpress teams
+# ink: tools for wordpress teams that work
 
 ## wat
 
