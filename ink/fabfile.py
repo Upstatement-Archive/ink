@@ -77,7 +77,7 @@ def save(project=False, db=False):
 
     env.sql_filename = "%s_%s.sql" % (env.db, datetime.datetime.now().strftime(env.dt_format))
 
-    local("mysqldump --host=%(mysql_host)s --user=%(mysql_root_user)s --password=%(mysql_root_pass)s --socket=%(mysql_socket)s --port=%(mysql_port)s --lock-all-tables %(db)s --set-gtid-purged=OFF > %(ink_path)s/%(project)s/%(sql_filename)s" % env)
+    local("mysqldump --host=%(mysql_host)s --user=%(mysql_root_user)s --password=%(mysql_root_pass)s --socket=%(mysql_socket)s --port=%(mysql_port)s --lock-all-tables %(db)s > %(ink_path)s/%(project)s/%(sql_filename)s" % env)
 
     print "\nDumped %(sql_filename)s into %(ink_path)s/%(project)s/ from %(db)s" % env
 
