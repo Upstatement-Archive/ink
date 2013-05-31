@@ -24,7 +24,6 @@ from setuptools import setup
 
 install_requires = [
     'Fabric==1.6.0',
-    'MySQL-python==1.2.4',
     'distribute==0.6.31',
     'paramiko==1.10.0',
     'pycrypto==2.6',
