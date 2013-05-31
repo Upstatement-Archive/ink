@@ -39,8 +39,5 @@ setup(
     package_dir={'ink': 'ink'},
     description='CLI for MySQL database synchronousity.',
     install_requires=install_requires,
-    scripts=[
-        'ink/ink.py',
-        'ink/fabfile.py',
-    ],
+    data_files=[('ink', ['ink/ink.py', 'ink/fabfile.py'])]
 )
